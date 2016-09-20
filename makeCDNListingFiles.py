@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# File: makecdn.py
+# File: makeCDNListingFiles.py
 # Author: Rich Jerrido <rjerrido@outsidaz.org>
 # Purpose: Given a directory of expanded Red Hat Content ISOs, create a 'listing'
 #          file for each subdirectory, suitable to allow Satellite 6 to sync from
@@ -16,7 +16,7 @@ parser.add_option("-v", "--verbose", dest="verbose", action="store_true", help="
 if not (options.cdnexportdir):
     print "Must specify directory of expanded CDN content: see usage"
     parser.print_help()
-    print "\nExample usage: ./makecdn.py -c /var/www/html/pub/sat-import/"
+    print "\nExample usage: ./makeCDNListingFiles.py -c /var/www/html/pub/sat-import/"
     sys.exit(1)
 
 if not os.path.exists(options.cdnexportdir):
